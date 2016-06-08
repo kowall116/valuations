@@ -1,8 +1,6 @@
 #VALUATIONS
 
-----------------
-
-##Getting started
+####Getting started
 
 Open Terminal
 
