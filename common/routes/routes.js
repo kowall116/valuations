@@ -4,8 +4,25 @@ import {Route, IndexRoute} from 'react-router'
 import Valuations from '../containers/Valuations'
 import ValuationsCompanyPage from '../containers/ValuationsCompanyPage'
 
-const routes = <Route path="/" component={Valuations}>
-  <Route path="company/:company" component={ValuationsCompanyPage}/>
-</Route>
-
-export default routes
+export default function routes(store) {
+  // const ensureAuthenticated = (nextState, replace) => {
+  //   if (!store.getState().auth.token) {
+  //     replace('/login');
+  //   }
+  // };
+  // const skipIfAuthenticated = (nextState, replace) => {
+  //   if (store.getState().auth.token) {
+  //     replace('/');
+  //   }
+  // };
+  // const clearMessages = () => {
+  //   store.dispatch({
+  //     type: 'CLEAR_MESSAGES'
+  //   });
+  // };
+  return (
+    <Route path="/" component={Valuations}>
+		  <Route path="company/:company" component={ValuationsCompanyPage}/>
+		</Route>
+  );
+}

@@ -7,7 +7,7 @@ import { routerReducer, routerMiddleware } from 'react-router-redux'
 
 const initialState = typeof window !== 'undefined' ? window.__initialState__: {}
 
-export function configureValuationsStore(history, initialState) {
+export default function configureValuationsStore(history, initialState) {
 
   const valuationsStore = createStore(
   	valuationsReducer,
